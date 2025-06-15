@@ -1,0 +1,7 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://mongoadmin:secret@mongodb:27017/mymongodb
+      database: mymongodb
+  application:
+    name: SpringCQRS
