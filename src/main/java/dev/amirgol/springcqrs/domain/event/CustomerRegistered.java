@@ -14,12 +14,12 @@ public final class CustomerRegistered implements DomainEvent {
     }
 
     @Override
-    public CustomerId getAggregateId() {
+    public CustomerId aggregateId() {
         return aggregateId;
     }
 
     @Override
-    public Instant getOccurredOn() {
+    public Instant occurredOn() {
         return occurredOn;
     }
 }
