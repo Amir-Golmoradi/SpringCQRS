@@ -98,6 +98,3 @@ public class Customer {
         return lastLoginDate;
     }
 }
-
-
-
