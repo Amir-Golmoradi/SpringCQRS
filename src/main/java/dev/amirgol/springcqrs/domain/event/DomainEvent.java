@@ -6,6 +6,6 @@ import dev.amirgol.springcqrs.domain.vo.FullName;
 import java.time.Instant;
 
 public interface DomainEvent {
-    CustomerId getAggregateId();
-    Instant getOccurredOn();
+    CustomerId aggregateId();
+    Instant occurredOn();
 }
