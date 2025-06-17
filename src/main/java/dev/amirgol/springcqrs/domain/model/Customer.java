@@ -59,6 +59,7 @@ public class Customer {
     }
 
     public void updateProfile(Email email, FullName fullName, Password password) {
+
         if (!Objects.equals(this.email, email)) {
             setEmail(email);
         }
