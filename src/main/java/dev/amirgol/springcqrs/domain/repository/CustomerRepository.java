@@ -14,7 +14,7 @@ public interface CustomerRepository {
 
     Optional<Customer> findByEmail(Email email);
 
-    void register(Customer customer);
+    void save(Customer customer);
 
     void update(Customer customer);
 
