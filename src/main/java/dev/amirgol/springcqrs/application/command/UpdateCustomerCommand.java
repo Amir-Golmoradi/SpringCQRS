@@ -1,10 +1,10 @@
 package dev.amirgol.springcqrs.application.command;
 
 import dev.amirgol.springcqrs.core.command.Command;
-import dev.amirgol.springcqrs.domain.vo.CustomerId;
-import dev.amirgol.springcqrs.domain.vo.Email;
-import dev.amirgol.springcqrs.domain.vo.FullName;
-import dev.amirgol.springcqrs.domain.vo.Password;
+import dev.amirgol.springcqrs.domain.value_object.CustomerId;
+import dev.amirgol.springcqrs.domain.value_object.Email;
+import dev.amirgol.springcqrs.domain.value_object.FullName;
+import dev.amirgol.springcqrs.domain.value_object.Password;
 import jakarta.validation.constraints.NotNull;
 
 public record UpdateCustomerCommand(
