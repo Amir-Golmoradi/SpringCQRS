@@ -1,9 +1,9 @@
 package dev.amirgol.springcqrs.domain.repository;
 
 import dev.amirgol.springcqrs.domain.model.Customer;
-import dev.amirgol.springcqrs.domain.vo.CustomerId;
-import dev.amirgol.springcqrs.domain.vo.Email;
-import dev.amirgol.springcqrs.domain.vo.FullName;
+import dev.amirgol.springcqrs.domain.value_object.CustomerId;
+import dev.amirgol.springcqrs.domain.value_object.Email;
+import dev.amirgol.springcqrs.domain.value_object.FullName;
 
 import java.util.Optional;
 
