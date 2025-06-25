@@ -1,7 +1,6 @@
 package dev.amirgol.springcqrs.domain.event;
 
-import dev.amirgol.springcqrs.domain.vo.CustomerId;
-import dev.amirgol.springcqrs.domain.vo.FullName;
+import dev.amirgol.springcqrs.domain.value_object.CustomerId;
 
 import java.time.Instant;
 
