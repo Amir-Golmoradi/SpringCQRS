@@ -17,8 +17,7 @@ public interface CommandHandler<C extends Command<R>, R> {
      * Handles the given command, executing the associated business logic.
      *
      * @param command The command to be processed.
-     * @return The result of the command execution.
      */
 
-    R handle(C command);
+    void handle(C command);
 }
