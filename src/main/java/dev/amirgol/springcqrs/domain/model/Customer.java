@@ -1,12 +1,12 @@
 package dev.amirgol.springcqrs.domain.model;
 
-import dev.amirgol.springcqrs.domain.event.CustomerLoggedIn;
-import dev.amirgol.springcqrs.domain.event.CustomerProfileUpdated;
+import dev.amirgol.springcqrs.domain.event.child.CustomerLoggedIn;
+import dev.amirgol.springcqrs.domain.event.child.CustomerProfileUpdated;
 import dev.amirgol.springcqrs.domain.event.DomainEvent;
-import dev.amirgol.springcqrs.domain.vo.CustomerId;
-import dev.amirgol.springcqrs.domain.vo.Email;
-import dev.amirgol.springcqrs.domain.vo.FullName;
-import dev.amirgol.springcqrs.domain.vo.Password;
+import dev.amirgol.springcqrs.domain.value_object.CustomerId;
+import dev.amirgol.springcqrs.domain.value_object.Email;
+import dev.amirgol.springcqrs.domain.value_object.FullName;
+import dev.amirgol.springcqrs.domain.value_object.Password;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
