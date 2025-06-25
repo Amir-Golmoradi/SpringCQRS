@@ -5,10 +5,10 @@ import dev.amirgol.springcqrs.core.command.CommandHandler;
 import dev.amirgol.springcqrs.domain.event.DomainEventPublisher;
 import dev.amirgol.springcqrs.domain.model.Customer;
 import dev.amirgol.springcqrs.domain.repository.CustomerRepository;
-import dev.amirgol.springcqrs.domain.vo.CustomerId;
-import dev.amirgol.springcqrs.domain.vo.Email;
-import dev.amirgol.springcqrs.domain.vo.FullName;
-import dev.amirgol.springcqrs.domain.vo.Password;
+import dev.amirgol.springcqrs.domain.value_object.CustomerId;
+import dev.amirgol.springcqrs.domain.value_object.Email;
+import dev.amirgol.springcqrs.domain.value_object.FullName;
+import dev.amirgol.springcqrs.domain.value_object.Password;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -23,15 +23,14 @@ public class RegisterCustomerHandler implements CommandHandler<RegisterCustomerC
 
     @Override
     @Transactional
-    public CustomerId handle(RegisterCustomerCommand cmd) {
+    public void handle(RegisterCustomerCommand command) {
         var customer = Customer.register(
-                new Email(cmd.email().value()),
-                new FullName(cmd.fullName().value()),
-                new Password(passwordEncoder.encode(cmd.password().value()))
+                new Email(command.email().value()),
+                new FullName(command.fullName().value()),
+                new Password(passwordEncoder.encode(command.password().value()))
         );
 
         customerRepository.save(customer);
         domainEventPublisher.publish(customer.pullDomainEvent());
-        return customer.getId();
     }
 }
